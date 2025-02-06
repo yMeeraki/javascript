@@ -1,8 +1,6 @@
-// Assignment 4: Console-Based Number Input Program
+// Console-Based Number Input Program
 
-// Objective: Create a Node.js console-based program that continuously takes input from the user until the user enters 0. Once 0 is entered, the program should terminate and display "End".
 
-// Requirements:
 
 // Use the prompt-sync package to take input from the user.
 const prompt = require('prompt-sync')()
