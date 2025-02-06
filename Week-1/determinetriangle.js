@@ -5,19 +5,30 @@ const b = ~~prompt('Enter b side value: ')
 const c = ~~prompt('Enter c side value: ')
 
 
-if((a+b)<c || (b+c)<a || (a+c)<b){
-    console.log("Invalid Triangle")
+
+
+
+
+// Function to check if the sides form a valid triangle
+function isValidTriangle(a, b, c) {
+    return a + b > c && a + c > b && b + c > a;
 }
 
+if (!isValidTriangle(a, b, c)) {
+    console.log("Invalid Triangle");
+} else {
+
+    
 // Conditions to check:
 // If all three sides are equal → Equilateral Triangle
 // If exactly two sides are equal → Isosceles Triangle
 // If all sides are different → Scalene Triangle
 // If the given sides do not form a valid triangle, print "Invalid Triangle"
-else if((a+b)>c && (b+c)>a && (a+c)>b){
-    const caseValue = (a === b && b === c) ? "equilateral" : 
-    (a === b || b === c || a === c) ? "isosceles" : "scalene";
+// Taking input from the user
 
+    const caseValue = (a === b && b === c) ? "equilateral" : 
+                      (a === b || b === c || a === c) ? "isosceles" : "scalene";
+    
     switch (caseValue) {
         case "equilateral":
             console.log("Equilateral Triangle");
@@ -32,12 +43,6 @@ else if((a+b)>c && (b+c)>a && (a+c)>b){
             console.log("Invalid Triangle");
     }
 }
-
-else{
-    console.log('Invalid Input')
-}
-
-
 
 
 
