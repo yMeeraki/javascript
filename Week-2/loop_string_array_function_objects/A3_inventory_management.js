@@ -12,13 +12,15 @@ const transactions = [
     { item: "orange", type: "sale", quantity: 40 },
     { item: "apple", type: "sale", quantity: 30 }
 ];
+getInventory(transactions)
 
-
-const inventory = {}
+function getInventory(transactions) {
+    const inventory = {}
 
     let count = 0    
 
-for (let i = 0; i < transactions.length; i++){
+    for (let i = 0; i < transactions.length; i++){
+    
     let fruit = transactions[i]
     const item = fruit.item
 
@@ -44,5 +46,8 @@ for (let i = 0; i < transactions.length; i++){
 
 }
     console.log(inventory)
+}
+
+
 
 
