@@ -3,7 +3,7 @@
 // Takes user input for height (n) and prints n rows of increasing '' characters.
 // Bonus: Allows users to choose a different character instead of '*'.
 
-// const prompt = require('prompt-sync')()
+const prompt = require('prompt-sync')()
 
 // Get user input (prompt-based for browser)
 let height = parseInt(prompt("Enter height: "), 10);

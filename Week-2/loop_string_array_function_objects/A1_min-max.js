@@ -7,9 +7,7 @@
 
 
 
-function findMin(numbers){
-    // return numbers.sort()
-}
+
 
 const numbers = [4, 9, 2, 15, 6] 
 const numbers2 = [10, -5, 0, 8, 22]
