@@ -22,15 +22,16 @@ const warehouse = [
     ]
 ];
 
-const inventory = {}
+
 
 
 console.log(getTotalValue(warehouse)); 
-// console.log(findMostExpensive(warehouse));
+console.log(findMostExpensive(warehouse));
 
 
 
 function getTotalValue(warehouse) {
+    const inventory = {}
     for (let i = 0; i < warehouse.length; i++){
         const category = warehouse[i][0]
         const items = warehouse[i].slice(1)
@@ -45,6 +46,25 @@ function getTotalValue(warehouse) {
     return inventory
 }
 
-// function findMostExpensive(warehouse){
-
-// }
+function findMostExpensive(warehouse) {
+    const mostExpensiveProduct = {
+        name: '',
+        price:''
+    }
+    for (let i = 0; i < warehouse.length; i++){
+        const category = warehouse[i][0]
+        const items = warehouse[i].slice(1)
+        // console.log(category) 
+        // console.log(items)
+       
+        for (let j = 0; j < items.length; j++){
+            if (items[j].price > mostExpensiveProduct.price) {
+                mostExpensiveProduct.name = items[j].name
+                mostExpensiveProduct.price = items[j].price
+                mostExpensiveProduct.category = category
+            }
+        }      
+        
+    }
+    return mostExpensiveProduct
+}
